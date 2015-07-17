@@ -4,7 +4,7 @@ import matplotlib.pyplot
 
 if len(sys.argv) != 2:
   sys.exit('expected the name of data to be plotted.')
-input_filename = sys.argv[0]
+input_filename = sys.argv[1]
 data = numpy.loadtxt(fname=input_filename, delimiter=',')
 
 fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
