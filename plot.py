@@ -1,7 +1,11 @@
+import sys
 import numpy
 import matplotlib.pyplot
 
-data = numpy.loadtxt(fname='data/inflammation-01.csv', delimiter=',')
+if len(sys.argv) != 2:
+  sys.exit('expected the name of data to be plotted.')
+input_filename = sys.argv[0]
+data = numpy.loadtxt(fname=input_filename, delimiter=',')
 
 fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
 
